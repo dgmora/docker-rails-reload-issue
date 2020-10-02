@@ -1,24 +1,23 @@
-# README
+# Rails Reload Issue
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- **Working** Docker Community for Mac `2.3.0.5`
+- **Broken** Docker Community for Mac `2.4.0.0`
 
-Things you may want to cover:
+# Instructions to Reproduce
 
-* Ruby version
+1. Run `docker-compose up --build`
+1. Visit `http://localhost:3000`
+    - See words `DELETE ME`
+1. Edit `views/posts/index.html.erb`
+    - Remove words `DELETE ME`
+1. Refresh
+    - If running `2.3.0.5`, words will disappear.
+    - If running `2.4.0.0`, words remain.
 
-* System dependencies
+### Docker Community 2.4.0.0
 
-* Configuration
+While on `2.4.0.0`, you can force refresh to work by swapping file watchers.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  1. Search for `SWAP_FILE_WATCHER`
+  1. Swap lines so `FileUpdateChecker` is active
+  1. Restart container & rerun instructions above
