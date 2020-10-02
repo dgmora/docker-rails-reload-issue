@@ -12,9 +12,12 @@
     - Remove words `DELETE ME`
 1. Refresh
     - If running `2.3.0.5`, words will disappear.
-    - If running `2.4.0.0`, words remain.
+    - If running `2.4.0.0`, words remain (supposed to disappear).
+        - Restart container to pick up chnages.
 
-### Docker Community 2.4.0.0
+Swap docker versions to see broken vs working.
+
+# Docker Community 2.4.0.0
 
 While on `2.4.0.0`, you can force refresh to work by swapping file watchers.
 
