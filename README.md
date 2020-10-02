@@ -6,7 +6,7 @@
 # Instructions to Reproduce
 
 1. Run `docker-compose up --build`
-1. Visit `http://localhost:3000`
+1. Visit [http://localhost:3000/posts](http://localhost:3000/posts)
     - See words `DELETE ME`
 1. Edit `views/posts/index.html.erb`
     - Remove words `DELETE ME`
